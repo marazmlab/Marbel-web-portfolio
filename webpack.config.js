@@ -17,6 +17,23 @@ module.exports = {
           loader: 'babel-loader', // Użycie Babel do transpilacji
         },
       },
+      {
+        test: /\.css$/i,
+        exclude: /\.module\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.module.css$/i,
+        use: [
+            'style-loader',
+            {
+                loader: 'css-loader',
+                options: {
+                    modules: true,
+                },
+            },
+        ],
+      },
     ],
   },
   resolve: {
