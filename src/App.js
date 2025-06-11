@@ -1,5 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme } from "./styles/theme";
+import GlobalStyle from './styles/GlobalStyle';
+
+import Layout from "./components/Layout";
 
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
@@ -8,25 +13,24 @@ import AboutMe from './pages/AboutMe';
 import Contact from './pages/Contact';
 
 const App = () => {
+    const [theme, setTheme] = useState('dark');
+    const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark');
 
     return (
-        <Router>
-            <nav>
-                <ul>
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/portfolio'>Portfolio</Link></li>
-                    <li><Link to='/about'>About Me</Link></li>
-                    <li><Link to='/contact'>Contact</Link></li>
-                </ul>
-            </nav>
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/portfolio' element={<Portfolio />} />
-                <Route path='/project/:id' element={<Project />} />
-                <Route path='/about' element={<AboutMe />} />
-                <Route path='/contact' element={<Contact />} />
-            </Routes>
-        </Router>
+        <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
+            <GlobalStyle />
+            <Router>
+                <Layout theme={theme} toggleTheme={toggleTheme}>
+                    <Routes>
+                        <Route path='/' element={<Home />} />
+                        <Route path='/portfolio' element={<Portfolio />} />
+                        <Route path='/project/:id' element={<Project />} />
+                        <Route path='/about' element={<AboutMe />} />
+                        <Route path='/contact' element={<Contact />} />
+                    </Routes>
+                </Layout>
+            </Router>
+        </ThemeProvider>
     );
 };
 
