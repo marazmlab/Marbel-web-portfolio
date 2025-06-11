@@ -4,23 +4,28 @@ import styled from "styled-components";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
+const Name = styled.h1`
+  font-size: 2.5rem;
+  font-weight: bold;
+`;
+
+const Tagline = styled.p`
+  font-size: 1.2rem;
+  margin: 0 0 3rem 0;
+`;
 
 const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    min-height: 100vh;
-
-
-    @media (max-width: 900px) {
-        padding: 1rem;
-    }
-    @media (max-width: 600px) {
-        padding: 0.5rem;
-    }
+  position: fixed;
+  top: 3rem;
+  bottom: 3rem;
+  left: 3rem;
+  right: 3rem;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid ${({ theme }) => theme.secondary};
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 2rem;
 `;
 
 const Main = styled.main`
@@ -29,6 +34,8 @@ const Main = styled.main`
 
 const Layout = ({ children, theme, toggleTheme }) => (
     <Wrapper>
+        <Name>Marek Bełz</Name>
+        <Tagline>Designer & Developer</Tagline>
         <Navbar theme={theme} toggleTheme={toggleTheme} />
         <Main>{children}</Main>
         <Footer />

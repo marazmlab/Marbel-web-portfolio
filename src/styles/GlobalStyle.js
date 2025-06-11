@@ -1,11 +1,15 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
     body {
         background: ${({ theme}) => theme.background};
         color: ${({ theme }) => theme.text};
-        min-height: 100vh;
-        transition: background 0.3, color 0.3;
+        margin: 0;
+        overflow: hidden; 
+        transition: background 0.3s, color 0.3s;
     }
 `;
 

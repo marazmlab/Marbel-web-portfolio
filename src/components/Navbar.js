@@ -6,12 +6,12 @@ import ThemeToggle from "./ThemeToggle";
 
 const Nav = styled.nav`
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
 
     ul {
         display: flex;
+        flex-direction: column;
         gap: 1.5rem;
         margin: 0;
         padding: 0;
