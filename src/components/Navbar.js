@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import ThemeToggle from "./ThemeToggle";
 
+
 const Nav = styled.nav`
     display: flex;
     flex-direction: column;
@@ -27,6 +28,7 @@ const Nav = styled.nav`
 `
 
 const Navbar = ({ theme, toggleTheme }) => (
+
     <Nav>
         <ul>
             <li><Link to='/'>Home</Link></li>

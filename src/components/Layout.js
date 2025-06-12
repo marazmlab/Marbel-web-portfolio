@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import SplineBackground from "../components/SplineBackground";
 
 const Name = styled.h1`
   font-size: 2.5rem;
@@ -35,6 +36,7 @@ const Main = styled.main`
 
 const Layout = ({ children, theme, toggleTheme }) => (
     <Wrapper>
+        <SplineBackground />
         <Name>Marek Bełz</Name>
         <Tagline>Designer & Developer</Tagline>
         <Navbar theme={theme} toggleTheme={toggleTheme} />
