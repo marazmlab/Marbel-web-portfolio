@@ -6,20 +6,21 @@ import Footer from "./Footer";
 
 const Name = styled.h1`
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: lighter;
 `;
 
 const Tagline = styled.p`
   font-size: 1.2rem;
+  font-weight: lighter;
   margin: 0 0 3rem 0;
 `;
 
 const Wrapper = styled.div`
   position: fixed;
-  top: 3rem;
-  bottom: 3rem;
-  left: 3rem;
-  right: 3rem;
+  top: 2rem;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
   display: flex;
   flex-direction: column;
   border: 2px solid ${({ theme }) => theme.secondary};
