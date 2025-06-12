@@ -42,10 +42,14 @@ const Content = styled.div`
     flex-direction: column;
     text-align: right;
     padding: 2rem;
-    /* max-width: 400px; */
     min-width: 0;
     min-height: 0;
-    overflow-y: none;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 `
 
 const Main = styled.main`
@@ -64,7 +68,7 @@ const Layout = ({ children, theme, toggleTheme }) => (
                 <Main>{children}</Main>
             </Content>
         </Container>
-        <Footer />
+        {/* <Footer /> */}
     </Outer>
 );
 

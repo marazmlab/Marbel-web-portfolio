@@ -2,10 +2,10 @@ import React from "react";
 import styled from 'styled-components';
 
 const Card = styled.article`
-    background: ${({ theme }) => theme.secondary};
     color: ${({ theme }) => theme.text};
-    border-radius: 8px;
-    padding: 1.5rem;
+    border: 1px solid ${({ theme}) => theme.text};
+    padding: 1rem;
+    text-align: right;
 
     @media (max-width: 600px) {
         margin: 0 1rem;

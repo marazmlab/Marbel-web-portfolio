@@ -4,8 +4,8 @@ import styled from "styled-components";
 import ProjectItem from './ProjectItem';
 
 const List = styled.section`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
 
     @media (max-width: 900px) {
