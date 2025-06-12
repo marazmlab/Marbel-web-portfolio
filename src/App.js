@@ -5,6 +5,8 @@ import { lightTheme, darkTheme } from "./styles/theme";
 import GlobalStyle from './styles/GlobalStyle';
 
 import Layout from "./components/Layout";
+import SplineBackground from "./components/SplineBackground";
+
 
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
@@ -19,6 +21,7 @@ const App = () => {
     return (
         <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
             <GlobalStyle />
+            <SplineBackground />
             <Router>
                 <Layout theme={theme} toggleTheme={toggleTheme}>
                     <Routes>

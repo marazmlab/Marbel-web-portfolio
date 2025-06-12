@@ -46,6 +46,7 @@ module.exports = {
     }),
   ],
   devServer: {
+    historyApiFallback: true,
     static: './public', // Serwowanie plików z katalogu public
     port: 3000, // Port dev servera
     open: true,

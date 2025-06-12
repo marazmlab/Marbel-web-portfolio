@@ -2,9 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import ThemeToggle from "./ThemeToggle";
-
-
 const Nav = styled.nav`
     display: flex;
     flex-direction: column;
@@ -27,7 +24,7 @@ const Nav = styled.nav`
     }
 `
 
-const Navbar = ({ theme, toggleTheme }) => (
+const Navbar = () => (
 
     <Nav>
         <ul>
@@ -36,7 +33,6 @@ const Navbar = ({ theme, toggleTheme }) => (
             <li><Link to='/about'>About me</Link></li>
             <li><Link to='/contact'>Contact</Link></li>
         </ul>
-        <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
     </Nav>
 );
 

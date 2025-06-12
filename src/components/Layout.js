@@ -1,22 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
+import Head from './Head'
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import SplineBackground from "../components/SplineBackground";
 
-const Name = styled.h1`
-  font-size: 2.5rem;
-  font-weight: lighter;
-`;
-
-const Tagline = styled.p`
-  font-size: 1.2rem;
-  font-weight: lighter;
-  margin: 0 0 3rem 0;
-`;
-
-const Wrapper = styled.div`
+const Outer = styled.div`
   position: fixed;
   top: 2rem;
   bottom: 2rem;
@@ -24,25 +13,59 @@ const Wrapper = styled.div`
   right: 2rem;
   display: flex;
   flex-direction: column;
-  border: 2px solid ${({ theme }) => theme.secondary};
+  border: 1px solid ${({ theme }) => theme.text};
   box-sizing: border-box;
   overflow: hidden;
   padding: 2rem;
 `;
 
+const Container = styled.div`
+     display: flex;
+     flex: 1;
+     justify-content: space-between;
+     min-height: 0;
+`
+
+const Sidebar = styled.aside`
+    width: 220px;
+    min-width: 180px;
+    max-width: 260px;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+`
+
+const Content = styled.div`
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 2rem;
+    /* max-width: 400px; */
+    min-width: 0;
+    min-height: 0;
+    overflow-y: none;
+`
+
 const Main = styled.main`
     flex: 1;
+    min-height: 0;
 `
 
 const Layout = ({ children, theme, toggleTheme }) => (
-    <Wrapper>
-        <SplineBackground />
-        <Name>Marek Bełz</Name>
-        <Tagline>Designer & Developer</Tagline>
-        <Navbar theme={theme} toggleTheme={toggleTheme} />
-        <Main>{children}</Main>
+    <Outer>
+        <Head theme={theme} toggleTheme={toggleTheme}/>
+        <Container>
+            <Sidebar>
+                <Navbar />
+            </Sidebar>
+            <Content>
+                <Main>{children}</Main>
+            </Content>
+        </Container>
         <Footer />
-    </Wrapper>
+    </Outer>
 );
 
 export default Layout;
