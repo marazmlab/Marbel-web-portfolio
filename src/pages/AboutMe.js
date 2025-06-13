@@ -7,11 +7,33 @@ const AboutWrapper = styled.section`
     line-height: 2;
     letter-spacing: 0.1em;
     text-align: right;
-    max-width: 600px;
+    max-width: 610px;
     margin: 0 0 0 auto;
+
     @media (max-width: 600px) {
         padding: 1rem 0.5rem;
         font-size: 1rem;
+    }
+
+    & p {
+    margin-bottom: 1.2em;
+    }
+    & ul, & ol {
+        margin-left: 2em;
+        margin-bottom: 1.2em;
+    }
+    & li {
+        margin-bottom: 0.5em;
+    }
+    & h1, & h2, & h3 {
+        margin-top: 1.5em;
+        margin-bottom: 0.7em;
+        font-weight: bold;
+    }
+    & br {
+        display: block;
+        margin-bottom: 1em;
+        content: '';
     }
 `;
 

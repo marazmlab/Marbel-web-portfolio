@@ -6,6 +6,9 @@ import Label from './Label';
 
 const Card = styled.article`
     color: ${({ theme }) => theme.text};
+    max-width: 700px;
+    min-width: 800px;
+    margin: 0 0 0 auto;
     border: 1px solid transparent;
     box-shadow: 3px 3px 0px 0px transparent;
     padding: 1rem;

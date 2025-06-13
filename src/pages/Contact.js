@@ -1,11 +1,44 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import styled from 'styled-components';
+
+const ContactWrapper = styled.section`
+    max-width: 600px;
+    margin: 0 0 0 auto;
+    font-size: 1.15rem;
+    line-height: 2;
+
+    & a {
+        text-decoration: underline;
+    }
+`
 
 const Contact = () => {
+    const [contact, setContact] = useState(null);
+
+    useEffect(() => {
+        fetch('http://localhost:1337/api/contacts?populate=*')
+            .then(res => res.json())
+            .then(data => setContact(data.data[0]));
+    }, []);
+
+    if (!contact) return <p>Loading...</p>
+
+    const links = contact.links || [];
+
     return (
-        <>
-            <p>belzmarek@gmail.com</p>
-            <p>515 107 805</p>
-        </>
+        <ContactWrapper>
+            <p>{contact.email}</p>
+            <p>{contact.phone}</p>
+            <ul>
+                {links.map(link => (
+                    <li key={link.id}>
+                       <a href={link.url} target='_blank' rel='noopener noreferrer'>
+                            {link.label}
+                        </a> 
+                    </li>
+                ))}
+            </ul>
+        </ContactWrapper>
     );
 }
 
