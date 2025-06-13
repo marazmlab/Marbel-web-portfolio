@@ -8,9 +8,7 @@ const List = styled.section`
     flex-direction: column;
     gap: 2rem;
 
-    @media (max-width: 900px) {
-        grid-template-columns: auto(2, 1fr);
-    }
+    
     @media (max-width: 600px) {
         grid-template-columns: 1fr;
     }
@@ -25,6 +23,10 @@ const ProjectList = ({ projects }) => (
                     key={project.id}
                     title={project.title}
                     description={project.description}
+                    githubRepoUrl={project.githubRepoUrl}
+                    behanceUrl={project.behanceUrl}
+                    demoUrl={project.demoUrl}
+                    categories={project.categories}
                 />
         ))}
     </List>

@@ -1,30 +1,71 @@
 import React from "react";
 import styled from 'styled-components';
 
+import Button from './Button';
+import Label from './Label';
+
 const Card = styled.article`
     color: ${({ theme }) => theme.text};
-    border: 1px solid ${({ theme}) => theme.text};
+    border: 1px solid transparent;
+    box-shadow: 3px 3px 0px 0px transparent;
     padding: 1rem;
-    text-align: right;
 
     &:hover {
-        box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-        border-color: ${({ theme }) => theme.primary || "#007bff"};
-        cursor: pointer;
+        border: 1px solid ${({theme}) => theme.text};
+        box-shadow: 3px 3px 0px 0px ${({ theme }) => theme.text};
     }
 
-    
+    h3 {
+        margin-top: 0;
+        font-size: 2rem;
+        letter-spacing: 0cap.02rem;
+    }
+
+    p {
+        margin: 0;
+        line-height: 1.6;
+    }
 
     @media (max-width: 600px) {
         margin: 0 1rem;
     }
 `;
 
-const ProjectItem = ({ title, description }) => (
-    <Card>
-        <h3>{title}</h3>
-        <p>{description}</p>
-    </Card>
-);
+const renderRichText = (blocks) => 
+    blocks.map((block, i) => {
+        if (block.type === 'paragraph') {
+            return <p key={i}>{block.children.map((child, j) => child.text).join('')}</p>;
+        }
+        return null;
+    });
+
+const ProjectItem = ({ title, description, githubRepoUrl, behanceUrl, demoUrl, categories }) => {
+    let buttonHref= null;
+    if (githubRepoUrl) {
+        buttonHref = githubRepoUrl;
+    } else if (behanceUrl) {
+        buttonHref = behanceUrl;
+    } else if (demoUrl) {
+        buttonHref = demoUrl;
+    }
+
+    return (
+        <Card>
+            {categories && categories.length > 0 && (
+                <div>
+                    {categories.map((cat, i) => (
+                        <Label key={i}>{cat.name}</Label>
+                    ))}
+                </div>
+            )}
+            <h3>{title}</h3>
+            {Array.isArray(description)
+                ? renderRichText(description)
+                : <p>{description}</p>
+            }
+            {buttonHref && <Button href={buttonHref} />}
+        </Card>
+    );
+}
 
 export default ProjectItem;

@@ -16,7 +16,7 @@ const Outer = styled.div`
   border: 1px solid ${({ theme }) => theme.text};
   box-sizing: border-box;
   overflow: hidden;
-  padding: 2rem;
+  padding: 3rem;
 `;
 
 const Container = styled.div`
@@ -41,7 +41,6 @@ const Content = styled.div`
     display: flex;
     flex-direction: column;
     text-align: right;
-    padding: 2rem;
     min-width: 0;
     min-height: 0;
     overflow-y: auto;
@@ -68,7 +67,7 @@ const Layout = ({ children, theme, toggleTheme }) => (
                 <Main>{children}</Main>
             </Content>
         </Container>
-        {/* <Footer /> */}
+        <Footer />
     </Outer>
 );
 

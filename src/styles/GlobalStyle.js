@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
     
     body {
         font-family: 'Lato', sans-serif;
+        font-weight: 300;
         background: ${({ theme}) => theme.background};
         color: ${({ theme }) => theme.text};
         margin: 0;
@@ -22,16 +23,9 @@ const GlobalStyle = createGlobalStyle`
 
     ul {
         list-style: none;
-        padding: 0;
     }
 
-    h1 {
-        font-size: 2.5rem;
-    }
 
-    h2 {
-        font-size: 2rem;
-    }
 `;
 
 export default GlobalStyle;
