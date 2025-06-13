@@ -18,8 +18,14 @@ const List = styled.section`
 
 const ProjectList = ({ projects }) => (
     <List>
-        {projects.map(project => (
-            <ProjectItem key={project.id} {...project}/>
+        {projects
+            .filter(project => project && project.title)
+            .map(project => (
+                <ProjectItem 
+                    key={project.id}
+                    title={project.title}
+                    description={project.description}
+                />
         ))}
     </List>
 );

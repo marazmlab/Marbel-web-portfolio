@@ -1,24 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState} from 'react';
 import ProjectList from '../components/ProjectList';
 
-const projects = [
-    {id: 1, title: 'Project 1', description: 'Opis projektu 1,'},
-    {id: 2, title: 'Project 2', description: 'Opis projektu 2,'},
-    {id: 3, title: 'Project 2', description: 'Opis projektu 2,'},
-    {id: 4, title: 'Project 2', description: 'Opis projektu 2,'},
-    {id: 5, title: 'Project 2', description: 'Opis projektu 2,'},
-    {id: 6, title: 'Project 2', description: 'Opis projektu 2,'},
-    {id: 7, title: 'Project 2', description: 'Opis projektu 2,'},
-    {id: 8, title: 'Project 2', description: 'Opis projektu 2,'},
-    {id: 9, title: 'Project 2', description: 'Opis projektu 2,'},
-    {id: 10, title: 'Project 2', description: 'Opis projektu 2,'},
-    {id: 11, title: 'Project 2', description: 'Opis projektu 2,'},
-]
 
-const Portfolio = () => (
-    <>
-        <ProjectList projects={projects}/>
-    </>
-);
+const Portfolio = () => {
+    const [projects, setProjects] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        fetch('http://localhost:1337/api/projects?populate=*')
+            .then(res => res.json())
+            .then(data => {
+                setProjects(data.data);
+                setLoading(false);
+            });
+    }, []);
+
+    if (loading) return <p>Loading projects...</p>
+
+    return <ProjectList projects={projects}/>;
+};
 
 export default Portfolio;
