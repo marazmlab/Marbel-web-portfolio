@@ -15,20 +15,20 @@ const Info = styled.div`
 `
 
 const Name = styled.h1`
-  font-size: 2.5rem;
-  font-weight: lighter;
+  font-size: 3rem;
+  font-weight: 300;
 `;
 
 const Tagline = styled.p`
   font-size: 1.2rem;
-  font-weight: lighter;
+  /* font-weight: lighter; */
 `;
 
 const Head = ({theme, toggleTheme}) => (
     <HeadWrapper>
         <Info>
             <Name>Marek Bełz</Name>
-            <Tagline>Designer & Developer</Tagline>
+            <Tagline>Developer & Designer</Tagline>
         </Info>
         <ThemeToggle theme={theme} toggleTheme={toggleTheme}/>
     </HeadWrapper>

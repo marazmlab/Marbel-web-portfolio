@@ -21,7 +21,7 @@ const App = () => {
     return (
         <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
             <GlobalStyle />
-            <SplineBackground />
+            {/* <SplineBackground /> */}
             <Router>
                 <Layout theme={theme} toggleTheme={toggleTheme}>
                     <Routes>

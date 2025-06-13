@@ -67,7 +67,7 @@ const Layout = ({ children, theme, toggleTheme }) => (
                 <Main>{children}</Main>
             </Content>
         </Container>
-        <Footer />
+        {/* <Footer /> */}
     </Outer>
 );
 

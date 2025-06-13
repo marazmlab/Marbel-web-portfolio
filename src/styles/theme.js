@@ -12,3 +12,8 @@ export const darkTheme = {
     secondary: ' #6c757d',
 };
 
+export const breakpoints = {
+    mobile: '600px',
+    tablet: '900px',
+    desktop: '1200',
+};

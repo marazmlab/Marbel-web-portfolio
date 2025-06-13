@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const Nav = styled.nav`
@@ -24,14 +24,25 @@ const Nav = styled.nav`
     }
 `
 
+const StyledNavLink = styled(NavLink)`
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.2s;
+
+    &:hover,
+    &.active {
+        border-bottom: 1px solid ${({theme}) => theme.text};
+    }
+
+`
+
 const Navbar = () => (
 
     <Nav>
         <ul>
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to='/portfolio'>Portfolio</Link></li>
-            <li><Link to='/about'>About me</Link></li>
-            <li><Link to='/contact'>Contact</Link></li>
+            <li><StyledNavLink to='/'>Home</StyledNavLink></li>
+            <li><StyledNavLink to='/portfolio'>Portfolio</StyledNavLink></li>
+            <li><StyledNavLink to='/about'>About me</StyledNavLink></li>
+            <li><StyledNavLink to='/contact'>Contact</StyledNavLink></li>
         </ul>
     </Nav>
 );

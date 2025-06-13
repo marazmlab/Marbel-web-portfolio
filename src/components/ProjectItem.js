@@ -10,12 +10,12 @@ const Card = styled.article`
     min-width: 800px;
     margin: 0 0 0 auto;
     border: 1px solid transparent;
-    box-shadow: 3px 3px 0px 0px transparent;
+    box-shadow: 8px 8px 0px 0px transparent;
     padding: 1rem;
 
     &:hover {
         border: 1px solid ${({theme}) => theme.text};
-        box-shadow: 3px 3px 0px 0px ${({ theme }) => theme.text};
+        box-shadow: 8px 8px 0px 0px ${({ theme }) => theme.text};
     }
 
     h3 {

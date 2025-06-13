@@ -7,13 +7,21 @@ const GlobalStyle = createGlobalStyle`
     
     body {
         font-family: 'Lato', sans-serif;
-        font-weight: 300;
         background: ${({ theme}) => theme.background};
         color: ${({ theme }) => theme.text};
         margin: 0;
         overflow: hidden; 
+        overflow-x: hidden;
         transition: background 0.3s, color 0.3s;
         line-height: 1.6;
+        scroll-behavior: smooth;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            font-size: 1rem;
+            padding: 0 0.5rem;
+        }
     }
 
     a {
@@ -24,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
     ul {
         list-style: none;
     }
+
 
 
 `;
