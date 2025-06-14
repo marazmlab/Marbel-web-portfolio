@@ -15,12 +15,18 @@ const Nav = styled.nav`
         padding: 0;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         flex-direction: column;
         ul {
             flex-direction: column;
             gap: 0.5rem;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
         }
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        border-bottom: 1px solid ${({theme}) => theme.text};
     }
 `
 

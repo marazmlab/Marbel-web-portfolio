@@ -9,6 +9,13 @@ const StyledLabel = styled.span`
     border: 1px solid ${({theme}) => theme.text};
     color: ${({theme}) => theme.text};
     font-size: 0.8rem;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        margin: 0;
+        margin-right: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.7rem;
+    }
 `;
 
 const Label = ({ children, ...props}) => {

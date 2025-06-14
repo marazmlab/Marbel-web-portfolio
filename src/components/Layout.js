@@ -17,14 +17,26 @@ const Outer = styled.div`
   box-sizing: border-box;
   overflow: hidden;
   padding: 3rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    top: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    padding: 1rem;
+  }
 `;
 
 const Container = styled.div`
-     display: flex;
-     flex: 1;
-     justify-content: space-between;
-     min-height: 0;
-`
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    min-height: 0;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        flex-direction: column;
+    }
+`;
 
 const Sidebar = styled.aside`
     width: 220px;
@@ -34,6 +46,12 @@ const Sidebar = styled.aside`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
 `
 
 const Content = styled.div`
@@ -49,6 +67,12 @@ const Content = styled.div`
     }
     scrollbar-width: none;
     -ms-overflow-style: none;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        text-align: left;
+        width: 100%;
+        padding: 1rem 0.5rem;
+    }
 `
 
 const Main = styled.main`

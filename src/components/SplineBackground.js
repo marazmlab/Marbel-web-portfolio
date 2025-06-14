@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect} from 'react';
 import Spline from '@splinetool/react-spline';
 import styled from 'styled-components';
 
@@ -10,10 +10,15 @@ const Background = styled.div`
   overflow: hidden;
 `;
 
-const SplineBackground = () => (
-  <Background>
-    <Spline scene="https://prod.spline.design/jXrCm3ExDNKn0o7N/scene.splinecode" />
-  </Background>
-);
+const SplineBackground = ({ theme }) => {
+    const lightScene = 'https://prod.spline.design/aGfBHHpiVjOKkdaJ/scene.splinecode';
+    const darkScene =  'https://prod.spline.design/jXrCm3ExDNKn0o7N/scene.splinecode';
+
+    return (
+        <Background>
+            <Spline scene={theme == 'light' ? lightScene : darkScene} />
+        </Background>
+    )
+};
 
 export default SplineBackground;

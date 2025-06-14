@@ -6,16 +6,14 @@ import Label from './Label';
 
 const Card = styled.article`
     color: ${({ theme }) => theme.text};
-    max-width: 700px;
-    min-width: 800px;
-    margin: 0 0 0 auto;
     border: 1px solid transparent;
-    box-shadow: 8px 8px 0px 0px transparent;
+    border: 1px solid ${({theme}) => theme.text};
+    box-shadow: 6px 6px 0px 0px ${({ theme }) => theme.text};
     padding: 1rem;
 
     &:hover {
         border: 1px solid ${({theme}) => theme.text};
-        box-shadow: 8px 8px 0px 0px ${({ theme }) => theme.text};
+        box-shadow: 6px 6px 0px 0px ${({ theme }) => theme.text};
     }
 
     h3 {
@@ -27,10 +25,21 @@ const Card = styled.article`
     p {
         margin: 0;
         line-height: 1.6;
+        font-weight: 300;
     }
 
-    @media (max-width: 600px) {
-        margin: 0 1rem;
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        margin: 0;
+        padding: 0.5rem;
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+            /* font-weight: 200; */
+        }
     }
 `;
 

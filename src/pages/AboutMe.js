@@ -10,9 +10,8 @@ const AboutWrapper = styled.section`
     max-width: 610px;
     margin: 0 0 0 auto;
 
-    @media (max-width: 600px) {
-        padding: 1rem 0.5rem;
-        font-size: 1rem;
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        font-size: 0.8rem;
     }
 
     & p {

@@ -8,6 +8,10 @@ const HeadWrapper = styled.div`
     align-items: flex-start;
     justify-content: space-between;
     margin: 0 0 2rem 0;
+    
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        margin: 0 0 1rem 0;
+    }
 `;
 
 const Info = styled.div`
@@ -15,13 +19,22 @@ const Info = styled.div`
 `
 
 const Name = styled.h1`
-  font-size: 3rem;
-  font-weight: 300;
+    font-size: 3rem;
+    font-weight: 300;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        font-size: 2rem;
+        margin: 0;
+    }
+  
 `;
 
 const Tagline = styled.p`
-  font-size: 1.2rem;
-  /* font-weight: lighter; */
+    font-size: 1.2rem;
+  
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        font-size: 1rem;
+    }
 `;
 
 const Head = ({theme, toggleTheme}) => (

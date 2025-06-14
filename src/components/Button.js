@@ -14,6 +14,12 @@ const StyledButton = styled.a`
         background: ${({theme }) => theme.secondary};
         
     }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        font-size: 0.8rem;
+    }
+
+    
 `;
 
 const Button = ({ href, children, ...props}) => {
