@@ -39,8 +39,22 @@ const Card = styled.article`
         p {
             font-size: 0.8rem;
             /* font-weight: 200; */
-        }
+        }    
     }
+    @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+        margin: 0;
+        padding: 0.5rem;
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            /* font-weight: 200; */
+        }    
+    }
+    
 `;
 
 const renderRichText = (blocks) => 
