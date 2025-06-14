@@ -16,7 +16,7 @@ const Contact = () => {
     const [contact, setContact] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:1337/api/contacts?populate=*')
+        fetch('https://marbel.tech/api/contacts?populate=*')
             .then(res => res.json())
             .then(data => setContact(data.data[0]));
     }, []);

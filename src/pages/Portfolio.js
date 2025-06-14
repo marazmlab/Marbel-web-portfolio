@@ -7,7 +7,7 @@ const Portfolio = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:1337/api/projects?populate=*')
+        fetch('https://marbel.tech/api/projects?populate=*')
             .then(res => res.json())
             .then(data => {
                 setProjects(data.data);

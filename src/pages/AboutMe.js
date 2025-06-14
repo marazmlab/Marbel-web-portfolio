@@ -44,7 +44,7 @@ const AboutMe = () => {
     const [about, setAbout] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:1337/api/about-mes?populate=*')
+        fetch('https://marbel.tech/api/about-mes?populate=*')
             .then(res => res.json())
             .then(data => setAbout(data.data));
     }, []);
