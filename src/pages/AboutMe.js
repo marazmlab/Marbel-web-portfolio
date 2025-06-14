@@ -13,6 +13,9 @@ const AboutWrapper = styled.section`
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         font-size: 0.8rem;
     }
+    @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+        font-size: 1rem;
+    }
 
     & p {
     margin-bottom: 1.2em;

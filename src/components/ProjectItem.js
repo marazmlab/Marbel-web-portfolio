@@ -38,7 +38,6 @@ const Card = styled.article`
 
         p {
             font-size: 0.8rem;
-            /* font-weight: 200; */
         }    
     }
     @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -51,7 +50,6 @@ const Card = styled.article`
 
         p {
             font-size: 1rem;
-            /* font-weight: 200; */
         }    
     }
     
