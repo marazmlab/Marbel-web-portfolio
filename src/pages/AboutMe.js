@@ -5,7 +5,7 @@ const AboutWrapper = styled.section`
     color: ${({ theme }) => theme.text};
     font-size: 1.15rem;
     line-height: 2;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em;
     text-align: right;
     max-width: 610px;
     margin: 0 0 0 auto;
@@ -41,11 +41,15 @@ const AboutWrapper = styled.section`
 
 
 const AboutMe = () => {
-    
+
     const aboutContent = `
-    Jestem frontend developerem z doświadczeniem w designie.<br/>
-    Przez 10 lat pracowałem w reklamie, brandingu i digital arcie.<br/>
-    Teraz skupiam się na budowaniu nowoczesnych, responsywnych interfejsów.
+    I’m Marek Bełz, a Junior Frontend Developer on a mission to grow and learn every day. Armed with React and modern JavaScript. <br /><br />
+    
+    My background in graphic design, architecture and e-commerce photo retouch taught me to value usability, clarity and the user’s perspective, and im looking for environment to develop this mindset. <br /><br />
+
+    I feel best in places where I can ask questions, tackle real-world challenges and expand my skill set. If you’re looking for someone who brings energy, curiosity and a willingness to dive into the deep end, let’s connect and build something together.
+
+
     `;
 
     return (
