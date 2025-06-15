@@ -19,7 +19,7 @@ const Contact = () => {
         links: [
             { id: 1, label: "LinkedIn", url: "https://www.linkedin.com/in/belz/" },
             { id: 2, label: "GitHub", url: "https://github.com/marazmlab" },
-            { id: 2, label: "Behance", url: "https://www.behance.net/belzmareka716" },
+            { id: 3, label: "Behance", url: "https://www.behance.net/belzmareka716" },
             
         ]
     };
