@@ -13,24 +13,35 @@ const ContactWrapper = styled.section`
 `
 
 const Contact = () => {
-    const [contact, setContact] = useState(null);
+    const contact = {
+        email: "belzmarek@gmail.com",
+        phone: "+48 515 107 805",
+        links: [
+            { id: 1, label: "LinkedIn", url: "https://www.linkedin.com/in/belz/" },
+            { id: 2, label: "GitHub", url: "https://github.com/marazmlab" },
+            { id: 2, label: "Behance", url: "https://www.behance.net/belzmareka716" },
+            
+        ]
+    };
 
-    useEffect(() => {
-        fetch('https://marbel.tech/api/contacts?populate=*')
-            .then(res => res.json())
-            .then(data => setContact(data.data[0]));
-    }, []);
+    // const [contact, setContact] = useState(null);
 
-    if (!contact) return <p>Loading...</p>
+    // useEffect(() => {
+    //     fetch('https://marbel.tech/api/contacts?populate=*')
+    //         .then(res => res.json())
+    //         .then(data => setContact(data.data[0]));
+    // }, []);
 
-    const links = contact.links || [];
+    // if (!contact) return <p>Loading...</p>
+
+    // const links = contact.links || [];
 
     return (
         <ContactWrapper>
             <p>{contact.email}</p>
             <p>{contact.phone}</p>
             <ul>
-                {links.map(link => (
+                {contact.links.map(link => (
                     <li key={link.id}>
                        <a href={link.url} target='_blank' rel='noopener noreferrer'>
                             {link.label}
