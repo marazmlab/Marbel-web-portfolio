@@ -40,12 +40,8 @@ const AboutWrapper = styled.section`
 `;
 
 
-
-
-
-
-
 const AboutMe = () => {
+    
     const aboutContent = `
     Jestem frontend developerem z doświadczeniem w designie.<br/>
     Przez 10 lat pracowałem w reklamie, brandingu i digital arcie.<br/>
@@ -59,7 +55,7 @@ const AboutMe = () => {
     );
 
     // to change after strapi /railway problem solving 
-    
+
     // const [about, setAbout] = useState(null);
 
     // useEffect(() => {
