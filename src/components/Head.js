@@ -41,7 +41,7 @@ const Head = ({theme, toggleTheme}) => (
     <HeadWrapper>
         <Info>
             <Name>Marek Bełz</Name>
-            <Tagline>Developer & Designer</Tagline>
+            <Tagline>Frontend Developer & Designer</Tagline>
         </Info>
         <ThemeToggle theme={theme} toggleTheme={toggleTheme}/>
     </HeadWrapper>
