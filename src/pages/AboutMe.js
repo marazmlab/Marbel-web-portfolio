@@ -39,30 +39,45 @@ const AboutWrapper = styled.section`
     }
 `;
 
+const aboutContent = `
+  Jestem frontend developerem z doświadczeniem w designie.<br/>
+  Przez 10 lat pracowałem w reklamie, brandingu i digital arcie.<br/>
+  Teraz skupiam się na budowaniu nowoczesnych, responsywnych interfejsów.
+`;
 
-const AboutMe = () => {
-    const [about, setAbout] = useState(null);
+return (
+  <AboutWrapper>
+    <div dangerouslySetInnerHTML={{ __html: aboutContent }} />
+  </AboutWrapper>
+);
 
-    useEffect(() => {
-        fetch('https://marbel.tech/api/about-mes?populate=*')
-            .then(res => res.json())
-            .then(data => setAbout(data.data));
-    }, []);
 
-    if (!about) return <p>Loading...</p>;
 
-    const aboutItem = Array.isArray(about) ? about[0] : about;
+// to change after strapi /railway problem solving 
 
-    return (
-    <AboutWrapper>
-        {aboutItem && aboutItem.content && (
-        Array.isArray(aboutItem.content)
-            ? aboutItem.content.map((block, idx) => (
-                <p key={idx}>{block.children ? block.children.map(child => child.text).join('') : ''}</p>
-            ))
-            : <div dangerouslySetInnerHTML={{ __html: aboutItem.content }} />
-        )}
-    </AboutWrapper>
+// const AboutMe = () => {
+//     const [about, setAbout] = useState(null);
+
+//     useEffect(() => {
+//         fetch('https://marbel.tech/api/about-mes?populate=*')
+//             .then(res => res.json())
+//             .then(data => setAbout(data.data));
+//     }, []);
+
+//     if (!about) return <p>Loading...</p>;
+
+//     const aboutItem = Array.isArray(about) ? about[0] : about;
+
+//     return (
+//     <AboutWrapper>
+//         {aboutItem && aboutItem.content && (
+//         Array.isArray(aboutItem.content)
+//             ? aboutItem.content.map((block, idx) => (
+//                 <p key={idx}>{block.children ? block.children.map(child => child.text).join('') : ''}</p>
+//             ))
+//             : <div dangerouslySetInnerHTML={{ __html: aboutItem.content }} />
+//         )}
+//     </AboutWrapper>
 );
 }
 
