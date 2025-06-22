@@ -8,7 +8,7 @@ export const lightTheme = {
     background: '#fafafa',
     text: '#222222',
     primary: '#007bff',
-    secondary: 'rgb(144, 157, 169)',
+    secondary: 'rgb(231, 227, 227)',
     breakpoints,
 };
 
@@ -16,7 +16,7 @@ export const darkTheme = {
     background: '#181818',
     text: '#fafafa',
     primary: '#007bff',
-    secondary: '#6c757d',
+     secondary: 'rgb(30, 30, 30)',
     breakpoints,
 };
 
