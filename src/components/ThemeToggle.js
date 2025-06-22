@@ -15,7 +15,7 @@ const ToggleButton = styled.button`
     cursor: pointer;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         font-weight: 200;
         box-shadow: 3px 3px 0px 0px ${({ theme }) => theme.text};
     }

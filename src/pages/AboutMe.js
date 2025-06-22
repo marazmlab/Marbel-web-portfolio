@@ -11,32 +11,11 @@ const AboutWrapper = styled.section`
     max-width: 610px;
     margin: 0 0 0 auto;
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
         font-size: 0.8rem;
     }
-    @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-        font-size: 1rem;
-    }
-
-    & p {
-    margin-bottom: 1.2em;
-    }
-    & ul, & ol {
-        margin-left: 2em;
-        margin-bottom: 1.2em;
-    }
-    & li {
-        margin-bottom: 0.5em;
-    }
-    & h1, & h2, & h3 {
-        margin-top: 1.5em;
-        margin-bottom: 0.7em;
-        font-weight: bold;
-    }
-    & br {
-        display: block;
-        margin-bottom: 1em;
-        content: '';
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        font-size: 0.8rem;
     }
 `;
 
