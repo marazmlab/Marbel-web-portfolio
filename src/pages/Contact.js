@@ -5,6 +5,7 @@ const ContactWrapper = styled.section`
     max-width: 600px;
     margin: 0 0 0 auto;
     font-size: 1.15rem;
+    /* font-weight: 200; */
     line-height: 2.5;
 
     & a {

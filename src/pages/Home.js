@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 const HomeWrapper = styled.section`
     color: ${({ theme }) => theme.text};
-    font-size: 1.15rem;
+    font-size: 1.8rem;
+    /* font-weight: 200; */
     line-height: 2;
     letter-spacing: 0.2em;
     text-align: right;
@@ -11,10 +12,10 @@ const HomeWrapper = styled.section`
     margin: 0 0 0 auto;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     & p {
@@ -42,7 +43,7 @@ const HomeWrapper = styled.section`
 const Home = () => {
 
     const HometContent = `
-    I’m Marek Bełz, a Junior Frontend Developer on a mission to grow and learn every day. Armed with React and modern JavaScript. 
+    I built this to learn. And to have something to show. 
 
     `;
     return (

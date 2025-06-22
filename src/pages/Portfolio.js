@@ -6,6 +6,24 @@ const Portfolio = () => {
     const projects = [
   {
     id: 1,
+    title: "My Repositories",
+    description: "Where I code, learn, and break things",
+    githubRepoUrl: "https://github.com/marazmlab?tab=repositories",
+    behanceUrl: "",
+    demoUrl: "",
+    categories: [{ name: "Frontend" }]
+  },
+  {
+    id: 2,
+    title: "My Behance",
+    description: " I started in design — now I bring that mindset into front-end work.",
+    githubRepoUrl: "",
+    behanceUrl: "https://www.behance.net/belzmareka716",
+    demoUrl: "",
+    categories: [{ name: "Design" }]
+  },
+  {
+    id: 3,
     title: "React Redux Calendar",
     description: "This projectis dedicated to practicing and mastering state management in React using Redux.",
     githubRepoUrl: "https://github.com/marazmlab/React-Redux-Calendar",
@@ -14,7 +32,7 @@ const Portfolio = () => {
     categories: [{ name: "React" }, { name: "Frontend" }]
   },
   {
-    id: 2,
+    id: 4,
     title: "React Redux React Form Component",
     description: "This project showcases my ability to design and implement modern, user-friendly forms using React and Styled Component.",
     githubRepoUrl: "https://github.com/marazmlab/React-Form-Component",
@@ -23,7 +41,7 @@ const Portfolio = () => {
     categories: [{ name: "React" }]
   },
   {
-    id: 3,
+    id: 5,
     title: "Kriss Serwis Visual Identification and Page",
     description: "A visual identity for a construction company and a website sketch. My front-end beginnings ;)",
     githubRepoUrl: "",
@@ -32,7 +50,7 @@ const Portfolio = () => {
     categories: [{ name: "Frontend" }, { name: "Design" }]
   },
   {
-    id: 4,
+    id: 6,
     title: "Sagra Technology Landing Page",
     description: "A simple landing page that I created as a recruitment assignment.",
     githubRepoUrl: "",

@@ -20,6 +20,7 @@ const Card = styled.article`
     h3 {
         margin-top: 0;
         font-size: 2rem;
+        /* font-weight: 200; */
         letter-spacing: 0cap.02rem;
     }
 

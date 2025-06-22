@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 const AboutWrapper = styled.section`
     color: ${({ theme }) => theme.text};
-    font-size: 1.15rem;
+    font-size: 1.2rem;
+    font-weight: 300;
     line-height: 2;
     letter-spacing: 0.2em;
     text-align: right;
