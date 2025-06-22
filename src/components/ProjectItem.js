@@ -9,6 +9,7 @@ const Card = styled.article`
     border: 1px solid transparent;
     border: 1px solid ${({theme}) => theme.text};
     box-shadow: 6px 6px 0px 0px ${({ theme }) => theme.text};
+    margin-right: 5px;
     padding: 1rem;
 
     &:hover {
@@ -30,6 +31,7 @@ const Card = styled.article`
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         margin: 0;
+        
         padding: 0.5rem;
 
         h3 {
@@ -42,6 +44,7 @@ const Card = styled.article`
     }
     @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
         margin: 0;
+        margin-right: 5px;
         padding: 0.5rem;
 
         h3 {
