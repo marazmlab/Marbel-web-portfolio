@@ -6,7 +6,7 @@ export const breakpoints = {
 
 export const lightTheme = {
     background: ' #fafafa',
-    text: ' #222222',
+    text: '#222222',
     primary: ' #007bff',
     secondary: 'rgb(144, 157, 169)',
     breakpoints,

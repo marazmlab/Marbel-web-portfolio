@@ -38,6 +38,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'], // Rozpoznawane rozszerzenia
+    fallback: {
+        events: require.resolve('events/')
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({
