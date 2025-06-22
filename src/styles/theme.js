@@ -5,18 +5,18 @@ export const breakpoints = {
 };
 
 export const lightTheme = {
-    background: ' #fafafa',
+    background: '#fafafa',
     text: '#222222',
-    primary: ' #007bff',
+    primary: '#007bff',
     secondary: 'rgb(144, 157, 169)',
     breakpoints,
 };
 
 export const darkTheme = {
-    background: ' #181818',
-    text: ' #fafafa',
-    primary: ' #007bff',
-    secondary: ' #6c757d',
+    background: '#181818',
+    text: '#fafafa',
+    primary: '#007bff',
+    secondary: '#6c757d',
     breakpoints,
 };
 

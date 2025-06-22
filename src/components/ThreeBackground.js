@@ -12,6 +12,15 @@ const ThreeBackground = ({theme}) => {
         renderer.setSize(window.innerWidth, window.innerHeight);
         mountRef.current.appendChild (renderer.domElement);
 
+        const handleResize = () => {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+            renderer.setSize(width, height);
+        };
+        window.addEventListener('resize', handleResize);
+
         const geometry = new THREE.BoxGeometry();
         const material = new THREE.MeshBasicMaterial({ color: theme.text , wireframe: true });
         const cube = new THREE.Mesh(geometry, material);
@@ -29,6 +38,7 @@ const ThreeBackground = ({theme}) => {
         animate();
 
         return () => {
+            window.removeEventListener('resize', handleResize);
             mountRef.current.removeChild(renderer.domElement);
         };
     }, []);
