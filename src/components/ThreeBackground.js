@@ -31,8 +31,8 @@ const ThreeBackground = ({theme}) => {
 
         const animate = function () {
             requestAnimationFrame(animate);
-            cube.rotation.x += 0.002;
-            cube.rotation.y += 0.002;
+            cube.rotation.x += 0.004;
+            cube.rotation.y += 0.004;
             renderer.render(scene, camera);
         };
         animate();
