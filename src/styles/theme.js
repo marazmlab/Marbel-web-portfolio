@@ -13,7 +13,7 @@ export const lightTheme = {
 };
 
 export const darkTheme = {
-    background: '#181818',
+    background: 'rgb(165, 28, 28)',
     text: '#fafafa',
     primary: '#007bff',
      secondary: 'rgb(30, 30, 30)',
