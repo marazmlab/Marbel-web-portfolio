@@ -36,7 +36,16 @@ jobs:
         server: ${{ secrets.FTP_HOST }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        # local folder with Webpack built files
+        port: 21
         local-dir: ./dist/
         server-dir: ${{ secrets.FTP_PATH }}/
         dangerous-clean-slate: true
+    
+    - name: List files after upload
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: ${{ secrets.FTP_PATH }}/
+        dry-run: true
