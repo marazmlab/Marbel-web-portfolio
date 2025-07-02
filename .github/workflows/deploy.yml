@@ -44,3 +44,9 @@ jobs:
         local-dir: ./dist/
         server-dir: public_html/
         dangerous-clean-slate: true
+    
+    - name: Debug FTP upload
+      run: |
+        echo "About to upload to: public_html/"
+        echo "Files to upload:"
+        ls -la dist/
