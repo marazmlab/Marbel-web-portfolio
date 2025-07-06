@@ -2,7 +2,8 @@
 
 Modern, interactive portfolio website showcasing my frontend development skills. Built from scratch using React with cutting-edge technologies including Three.js for 3D animations and styled-components for dynamic theming. Features automated CI/CD deployment pipeline and responsive design optimized for all devices.
 
-🚀 **Live Demo:** [MARBEL.TECH](https://marbel.tech)
+🚀 **Deployed Website:** [MARBEL.TECH](https://marbel.tech)
+
 
 **Key Features:**
 - Dynamic theme switching (light/dark mode)
@@ -33,6 +34,8 @@ Modern, interactive portfolio website showcasing my frontend development skills.
 ![Prettier](https://img.shields.io/badge/prettier-%23F7B93E.svg?style=for-the-badge&logo=prettier&logoColor=black)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![VS Code](https://img.shields.io/badge/vs%20code-%23007ACC.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-000000?style=for-the-badge&logo=github&logoColor=white)
+![AI Assisted](https://img.shields.io/badge/AI%20Assisted-4ECDC4?style=for-the-badge&logo=openai&logoColor=white)
 
 &nbsp;
 
@@ -40,7 +43,7 @@ Modern, interactive portfolio website showcasing my frontend development skills.
 
 ### Core Technologies Used
 - **React 19.x** - Latest version with modern hooks and functional components
-- **Three.js** - Interactive 3D animations and background effects
+- **Three.js** - 3D animations and background effects
 - **Styled Components** - CSS-in-JS with dynamic theming capabilities
 - **React Router v7** - Client-side routing with parameter support
 - **Webpack 5** - Custom build configuration with optimization
@@ -52,6 +55,17 @@ Modern, interactive portfolio website showcasing my frontend development skills.
 
 &nbsp;
 
+## 🤖 Development Approach
+
+This project leverages modern development practices including AI-assisted coding for enhanced productivity and learning. While AI provided optimization suggestions, debugging guidance, and technical explanations, all architectural decisions, creative direction, and core implementations remain my independent work.
+
+**AI assistance areas**: Performance optimization, GLSL shader debugging, React best practices  
+**Independent work**: Project architecture, visual design, business logic, technology selection
+
+**Example AI collaboration**: AI suggested Three.js renderer optimizations which I evaluated, tested, and implemented with custom modifications for this project's specific needs.
+
+
+&nbsp;
 
 ## 🔶 Solutions provided in the project
 
@@ -130,7 +144,7 @@ Automated Cl/CD Pipeline
 - [ ] **Dynamic Content** - Portfolio projects from JSON, contact form validation
 - [ ] **UX Enhancements** - Loading states, error boundaries, custom 404 page
 - [ ] **Content Management** - Blog with markdown support, CMS integration
-- [ ] **Upgrade Three.js** model and animation
+- [x] **Upgrade Three.js** model and animation
 
 ### 🔍 **SEO & Analytics**
 - [ ] **SEO Basics** - Meta tags, Open Graph, XML sitemap
