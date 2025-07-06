@@ -11,10 +11,10 @@ const ThreeBackground = ({theme}) => {
         const camera = new THREE.PerspectiveCamera(20, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer({ 
             alpha: true,
-            antialias: false,        // Wyłącz antialias dla performance
+            antialias: false,        
             powerPreference: "high-performance",
-            stencil: false,          // Wyłącz stencil buffer
-            depth: true             // Zachowaj depth buffer
+            stencil: false,         
+            depth: true            
         });
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Limit pixel ratio
         renderer.setSize(window.innerWidth, window.innerHeight);
@@ -78,19 +78,11 @@ const ThreeBackground = ({theme}) => {
                 vec2 uv = vUv;
                 float t = time * 0.1;
                 
-<<<<<<< HEAD
                 // Create extreme liquid flow with much higher density
                 float noise1 = smoothNoise(uv * 6.0 + t);
                 float noise2 = smoothNoise(uv * 8.0 + vec2(noise1 * 8.0, t * 2.5));
                 float noise3 = smoothNoise(uv * 146.0 + vec2(noise2 * 6.0, t * 0.8));
                 float noise4 = smoothNoise(uv * 52.0 + vec2(noise3 * 4.0, t * 4.0));
-=======
-                // Create extreme liquid flow with much higher density (like reference)
-                float noise1 = smoothNoise(uv * 3.0 + t);
-                float noise2 = smoothNoise(uv * 8.0 + vec2(noise1 * 8.0, t * 2.5));
-                float noise3 = smoothNoise(uv * 16.0 + vec2(noise2 * 6.0, t * 0.8));
-                float noise4 = smoothNoise(uv * 32.0 + vec2(noise3 * 4.0, t * 4.0));
->>>>>>> f31bbb4d1392689a2117b4ea9b7ab19a81d988f2
                 float noise5 = smoothNoise(uv * 64.0 + vec2(noise4 * 3.0, t * 2.0));
                 float noise6 = smoothNoise(uv * 128.0 + vec2(noise5 * 2.0, t * 1.2));
                 
@@ -107,11 +99,7 @@ const ThreeBackground = ({theme}) => {
                 regions += smoothstep(0.4, 0.6, noise6) * 0.4;
                 
                 // Clamp to prevent over-saturation
-<<<<<<< HEAD
                 regions = clamp(regions, 0.0, 0.3);
-=======
-                regions = clamp(regions, 0.0, 1.0);
->>>>>>> f31bbb4d1392689a2117b4ea9b7ab19a81d988f2
                 
                 // Use configurable colors based on theme
                 vec3 color1, color2, color3, color4;
@@ -142,11 +130,7 @@ const ThreeBackground = ({theme}) => {
                 vec3 finalColor = mix(layer1, layer2, 0.6);
                 finalColor = mix(finalColor, layer3, 0.4);
                 
-<<<<<<< HEAD
                 // Add organic swirls
-=======
-                // Add organic swirls like in the reference
->>>>>>> f31bbb4d1392689a2117b4ea9b7ab19a81d988f2
                 float swirl = smoothNoise(uv * 6.0 + vec2(pattern * 2.0, t * 0.5));
                 finalColor = mix(finalColor, color4, smoothstep(0.7, 1.0, swirl) * swirlIntensity);
                 
@@ -160,7 +144,6 @@ const ThreeBackground = ({theme}) => {
 
         const geometry = new THREE.BoxGeometry();
         
-<<<<<<< HEAD
         // Color configuration 
         const colorConfig = {
             dark: {
@@ -176,23 +159,6 @@ const ThreeBackground = ({theme}) => {
                 color2: new THREE.Color(0.95, 0.95, 0.95),        
                 color3: new THREE.Color(0.85, 0.85, 0.85),        
                 color4: new THREE.Color(0.70, 0.70, 0.70)         
-=======
-        // Color configuration - extreme contrast like reference image
-        const colorConfig = {
-            dark: {
-                // Dark theme - maximum contrast black to white like reference
-                color1: new THREE.Color(0.0, 0.0, 0.0),            // Pure black
-                color2: new THREE.Color(0.15, 0.15, 0.15),         // Dark gray
-                color3: new THREE.Color(0.45, 0.45, 0.45),         // Medium gray
-                color4: new THREE.Color(0.85, 0.85, 0.85)          // Light gray
-            },
-            light: {
-                // Light theme - much whiter colors for better contrast
-                color1: new THREE.Color(1.0, 1.0, 1.0),            // Pure white
-                color2: new THREE.Color(0.95, 0.95, 0.95),         // Very light gray
-                color3: new THREE.Color(0.85, 0.85, 0.85),         // Light gray
-                color4: new THREE.Color(0.70, 0.70, 0.70)          // Medium gray
->>>>>>> f31bbb4d1392689a2117b4ea9b7ab19a81d988f2
             }
         };
         
@@ -210,26 +176,16 @@ const ThreeBackground = ({theme}) => {
                 lightColor2: { value: colorConfig.light.color2 },
                 lightColor3: { value: colorConfig.light.color3 },
                 lightColor4: { value: colorConfig.light.color4 },
-<<<<<<< HEAD
                 // Pattern control 
                 contrastBoost: { value: 2.5 },        // Stronger contrast
                 patternIntensity: { value: 2.5 },     // Higher pattern intensity
-=======
-                // Pattern control - enhanced for reference-like density
-                contrastBoost: { value: 2.5 },        // Stronger contrast
-                patternIntensity: { value: 12.5 },     // Higher pattern intensity
->>>>>>> f31bbb4d1392689a2117b4ea9b7ab19a81d988f2
                 swirlIntensity: { value: 0.1 },       // More swirl details
-                // Opacity control - manually adjustable
-                opacity: { value: 0.3 }  // Reduced opacity for better text visibility
+                // Opacity control 
+                opacity: { value: 0.3 }  
             },
             vertexShader,
             fragmentShader,
-<<<<<<< HEAD
             transparent: true  
-=======
-            transparent: true  // Enable transparency
->>>>>>> f31bbb4d1392689a2117b4ea9b7ab19a81d988f2
         });
 
         materialRef.current = material;
@@ -269,11 +225,7 @@ const ThreeBackground = ({theme}) => {
 
     useEffect(() => {
         if (materialRef.current) {
-<<<<<<< HEAD
             // Update theme when it changes 
-=======
-            // Update theme when it changes - corrected detection
->>>>>>> f31bbb4d1392689a2117b4ea9b7ab19a81d988f2
             const isDark = theme.background === '#181818' || theme.background === '#121212' || theme.background === '#1a1a1a' || 
                           theme.background.includes('dark') || theme.name === 'dark';
             materialRef.current.uniforms.isDarkTheme.value = isDark ? 1.0 : 0.0;
