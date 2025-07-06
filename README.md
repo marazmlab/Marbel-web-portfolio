@@ -29,6 +29,7 @@ Modern, interactive portfolio website showcasing my frontend development skills.
 ![Babel](https://img.shields.io/badge/babel-%23F9DC3E.svg?style=for-the-badge&logo=babel&logoColor=black)
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
 ![FTP](https://img.shields.io/badge/ftp-%23000000.svg?style=for-the-badge&logoColor=white)
+![Google Analytics](https://img.shields.io/badge/Google%20Analytics-E37400?style=for-the-badge&logo=google-analytics&logoColor=white)
 
 ### Development Tools
 ![Prettier](https://img.shields.io/badge/prettier-%23F7B93E.svg?style=for-the-badge&logo=prettier&logoColor=black)
@@ -122,6 +123,7 @@ Automated Cl/CD Pipeline
 - **Github Actions** workflow for automated builds
 - **FTP deployment** to custom hosting (Hostinger)
 - **Code formatting** with Prettier integration
+- **Analytics** & Performance Monitoring
 
 &nbsp;
 
@@ -148,7 +150,7 @@ Automated Cl/CD Pipeline
 
 ### 🔍 **SEO & Analytics**
 - [ ] **SEO Basics** - Meta tags, Open Graph, XML sitemap
-- [ ] **Analytics** - Google Analytics integration, basic performance monitoring
+- [x] **Analytics** - Google Analytics integration, basic performance monitoring
 - [ ] **Enhanced meta descriptions** and alt texts
 - [ ] **Favicon and manifest.json** setup
 
