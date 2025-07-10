@@ -179,7 +179,7 @@ const ThreeBackground = ({theme}) => {
                 // Pattern control 
                 contrastBoost: { value: 2.5 },        // Stronger contrast
                 patternIntensity: { value: 2.5 },     // Higher pattern intensity
-                swirlIntensity: { value: 0.1 },       // More swirl details
+                swirlIntensity: { value: 0.0 },       // More swirl details
                 // Opacity control 
                 opacity: { value: 0.3 }  
             },
