@@ -91,7 +91,11 @@ const ProjectItem = ({ title, description, githubRepoUrl, behanceUrl, demoUrl, c
                 ? renderRichText(description)
                 : <p>{description}</p>
             }
-            {buttonHref && <Button href={buttonHref} />}
+            <div style={{ display: "flex", gap: "8px", marginTop: "1rem" }}>
+                {githubRepoUrl && <Button href={githubRepoUrl}>GitHub</Button>}
+                {behanceUrl && <Button href={behanceUrl}>Behance</Button>}
+                {demoUrl && <Button href={demoUrl}>Live Demo</Button>}
+            </div>
         </Card>
     );
 }

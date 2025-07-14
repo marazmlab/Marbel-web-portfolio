@@ -26,7 +26,7 @@ const Button = ({ href, children, ...props}) => {
     let label = 'Check More'
     if ( href?.includes('github.com')) label = 'Check on Github';
     else if (href?.includes('behance.net')) label = 'Check on Behance';
-    else if (href) label = 'Check More';
+    else if (href) label = 'Demo';
     return (
         <StyledButton href={href} target='_blank' rel='noopener noreferrer' {...props}>
             {label}
