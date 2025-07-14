@@ -14,6 +14,17 @@ const ToggleButton = styled.button`
     width: auto;
     cursor: pointer;
 
+    &:hover {
+        background: ${({theme }) => theme.secondary};
+        transform: translate(2px, 2px);
+        box-shadow: 1px 1px 0px 0px ${({ theme }) => theme.text};
+    }
+
+    &:active {
+        transform: translate(3px, 3px);
+        box-shadow: none;
+    }
+
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         font-size: 0.7rem;
         font-weight: 200;
